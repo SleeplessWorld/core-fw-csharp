@@ -61,5 +61,19 @@ namespace walle.component.file
         }
 
         #endregion
+
+        #region read
+
+        public static byte[] readAllBytes(String strFile)
+        {
+            byte[] arrContent = null;
+            if (!string.IsNullOrEmpty(strFile))
+            {
+                arrContent = File.ReadAllBytes(strFile);
+            }
+            return arrContent;
+        }
+        
+        #endregion
     }
 }
